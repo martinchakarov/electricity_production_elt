@@ -41,3 +41,30 @@ models:
         description: The subcontinent of the country
       - name: start_of_week
         description: The day that marks the start of the week in the country
+
+  - name: fact_electricity_production
+    description: Fact table for electricity production. It replicates the stg_iea_electricity_production model from the staging layer and adds a few columns to facilitate reporting.
+    columns:
+      - name: unique_id
+        description: A unique identifier for the record
+        data_tests:
+          - unique
+          - not_null
+      - name: country
+        description: The country where the electricity is produced
+        data_tests:
+          - relationships:
+              to: ref('stg_rest_countries')
+              field: name
+      - name: production_month
+        description: The month when the electricity was produced
+      - name: product
+        description: The type of electricity produced
+      - name: is_renewable
+        description: A boolean flag that indicates if the electricity is produced from renewable sources.
+      - name: production_gwh
+        description: The amount of electricity produced in gigawatt-hours
+      - name: production_gwh_previous_month
+        description: The amount of electricity produced in the previous month in gigawatt-hours
+      - name: production_growth_pct    
+        description: The percentage growth in electricity production compared to the previous month

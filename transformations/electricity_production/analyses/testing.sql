@@ -1,1 +1,1 @@
-select * from {{ source('electricity', 'countries') }}
+select distinct country from {{ ref('stg_iea_electricity_production') }} where country not in (select name from {{ ref('stg_rest_countries') }})

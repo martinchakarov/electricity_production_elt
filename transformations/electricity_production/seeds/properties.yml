@@ -1,0 +1,11 @@
+seeds:
+  - name: countries_mapping
+    config:
+      quote_columns: true
+      delimiter: ","
+    description: A mapping of country names to aliases
+    columns:
+      - name: country_name
+        description: The name of the country
+      - name: country_alias
+        description: An alias for the country

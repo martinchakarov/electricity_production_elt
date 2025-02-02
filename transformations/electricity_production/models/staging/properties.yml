@@ -41,3 +41,22 @@ models:
         description: The subcontinent of the country
       - name: start_of_week
         description: The day that marks the start of the week in the country
+
+  - name: stg_iea_electricity_production
+    description: Staging model for data from the International Energy Agency (IEA) on monthly electricity production by country
+    data_tests:
+      - unique:
+          column_name: "country || year || month || product"
+      - not_null:
+          column_name: "country || year || month || product"
+    columns:
+      - name: country
+        description: The name of the country
+      - name: year
+        description: The year of the data point
+      - name: month
+        description: The month of the data point
+      - name: product
+        description: The type of energy product
+      - name: production_gwh
+        description: The amount of electricity generated in gigawatt-hours (GWh)
