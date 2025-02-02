@@ -10,6 +10,10 @@ dbt-duckdb = "*"
 dlt = {extras = ["duckdb"], version = "*"}
 psutil = "*"
 urllib3 = "<2.0"
+streamlit = "*"
+pandas = "*"
+matplotlib = "*"
+plotly = "*"
 
 [dev-packages]
 

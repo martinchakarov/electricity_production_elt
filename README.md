@@ -59,3 +59,17 @@ Optionally, you can execute `dbt debug` to ensure the connection between dbt and
 ```dbt build```
 
 This will materialize and test all models and seeds in your project.
+
+## Running the data visualisation app
+
+There is a very simple [Streamlit](https://streamlit.io/) app created for the project showcasing basic BI functionalities that are achievable using Streamlit. 
+
+![A screenshot of the Streamlit app built for the project.](/assets/streamlit_preview.png "Streamlit Preview")
+
+To launch it, navigate to the `visualisation` folder:
+
+```cd visualisation```
+
+Then, execute the following command:
+
+```streamlit run dashboard.py```
