@@ -50,6 +50,10 @@ To run the dbt transformations, navigate to the dbt project folder:
 
 ```cd transformations/electricity_production```
 
+You need to execute the command below to install all dbt-specific dependencies first:
+
+```dbt deps```
+
 Optionally, you can execute `dbt debug` to ensure the connection between dbt and your DuckDB database works as expected. Then, execute the following command:
 
 ```dbt build```
