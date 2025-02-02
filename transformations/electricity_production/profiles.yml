@@ -1,0 +1,8 @@
+electricity_production:
+  outputs:
+    default:
+      type: duckdb
+      schema: analytics
+      path: ../../data.db
+      threads: 1
+    target: default

@@ -1,0 +1,43 @@
+models:
+  - name: dim_flex_countries
+    description: Dimensional model for countries. It replicates the stg_rest_countries model from the staging layer. Its purpose is to expose the staging data to the reporting layer.
+    columns:
+      - name: name
+        description: The name of the country
+        data_tests:
+          - unique
+          - not_null
+      - name: cca2_identifier
+        description: The two-letter country code
+      - name: ccn3_identifier
+        description: The three-digit country code
+      - name: is_independent
+        description: A boolean flag that indicates if the country is independent
+      - name: is_landlocked
+        description: A boolean flag that indicates if the country is landlocked
+      - name: is_un_member
+        description: A boolean flag that indicates if the country is a member of the United Nations
+      - name: capital_city
+        description: The capital city of the country
+      - name: region
+        description: The region of the country
+      - name: subregion
+        description: The subregion of the country
+      - name: latitude
+        description: The latitude of the country
+      - name: longitude
+        description: The longitude of the country
+      - name: area_sq_km
+        description: The area of the country in square kilometers
+      - name: population
+        description: The population of the country
+      - name: flag
+        description: A visual representation of the country's flag
+      - name: google_maps_link
+        description: A link to the country on Google Maps
+      - name: continent
+        description: The continent of the country
+      - name: subcontinent
+        description: The subcontinent of the country
+      - name: start_of_week
+        description: The day that marks the start of the week in the country

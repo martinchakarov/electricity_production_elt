@@ -1,0 +1,6 @@
+sources:
+  - name: electricity
+    schema: electricity_production
+    tables:
+      - name: electricity_production
+      - name: countries
