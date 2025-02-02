@@ -4,11 +4,11 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+duckdb = "*"
 dbt-core = "*"
 dbt-duckdb = "*"
 dlt = {extras = ["duckdb"], version = "*"}
 psutil = "*"
-duckdb = "*"
 urllib3 = "<2.0"
 
 [dev-packages]
