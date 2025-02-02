@@ -6,8 +6,10 @@ name = "pypi"
 [packages]
 dbt-core = "*"
 dbt-duckdb = "*"
-dlt = {extras = ["filesystem", "duckdb"], version = ">=1.5.0"}
+dlt = {extras = ["duckdb"], version = "*"}
+psutil = "*"
 duckdb = "*"
+urllib3 = "<2.0"
 
 [dev-packages]
 
